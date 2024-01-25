@@ -1,9 +1,9 @@
 import sys
 
 
-# contact_list = []
-contact_list = [{'name': 'NNnnn FFFfff', 'phone': '4771455464687'}, {'name': 'ldkhgh jdhg', 'phone': '245647897'}, {'name': 'Yul Meln', 'phone':
-'0978156194'}, {'name': 'Yu Me', 'phone': '097'}, {'name': 'Ko Ka', 'phone': '258'}]
+contact_list = []
+# contact_list = [{'name': 'NNnnn FFFfff', 'phone': '4771455464687'}, {'name': 'ldkhgh jdhg', 'phone': '245647897'}, {'name': 'Yul Meln', 'phone':
+# '0978156194'}, {'name': 'Yu Me', 'phone': '097'}, {'name': 'Ko Ka', 'phone': '258'}]
 
 
 
