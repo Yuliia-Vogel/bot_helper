@@ -1,7 +1,5 @@
-import sys
-
-
 contact_list = {}
+# контакт-лист суто для перевірки коду:
 # contact_list = {'NNnnn FFFfff' : '4771455464687', 'ldkhgh jdhg' : '245647897', 'Yul Meln' : '0978156194', 'Yu Me' : '097', 'Ko Ka' : '258'}
 
 
@@ -21,7 +19,7 @@ def input_error(fuction):
     return inner_func
 
 
-# основна функція, що запускається і приймає команди і видає результат
+# основна функція, що запускається, приймає команди і видає результат
 @input_error
 def main():
     print("Welcome to your bot assistant!")
@@ -41,7 +39,6 @@ def command_handler(the_input):
         return show_all_contacts()
     command_casefold = phrase_casefold.split(' ')
     command = command_casefold[0]
-    print(f'command is {command}')
     if command == 'hello':
         print("How can I help you?")
         return "How can I help you?"
@@ -50,16 +47,14 @@ def command_handler(the_input):
         exit(1) 
     input_data = the_input.rsplit(' ')
     phone = input_data[-1]
-    print(f'phone is {phone}')
     pre_pre_name = the_input.replace(command, '')
     pre_name = pre_pre_name.replace(phone, '')
     name = pre_name.strip()
-    print(f'name is {name}') 
-    if command == 'add':
+    if command == 'add' and len(input_data) >= 3:
         return add_new_contact(name, phone)
-    elif command == "change":
+    elif command == "change" and len(input_data) >= 3:
         return change_contact(name, phone) 
-    elif command == "phone":
+    elif command == "phone" and len(input_data) >= 2:
         return show_phone_of_contact(name)
     else: 
         raise ValueError
